@@ -2,7 +2,8 @@
 This project is about to simulate a load-balancer system with random choices
 
 Background: 
-Load balancing is used in many systems, e.g., cloud computing, web server farms, Domain Name Servers (DNS). As an abstract model, we assume a set of $m$ servers work in parallel to serve customers. Each server could be modeled as a FIFO queueing system. When a new customer arrives, the customer must first go through a load balancer. The load balancer can use different strategies to dispatch the customer to a server. To simplify, we in this project consider a randomized strategy as follows: 
+Load balancing is used in many systems, e.g., cloud computing, web server farms, Domain Name Servers (DNS). As an abstract model, we assume a set of $m$ servers work in parallel to serve customers. Each server could be modeled as a FIFO queueing system. When a new customer arrives, the customer must first go through a load balancer. The load balancer can use different strategies to dispatch the customer to a server. To simplify, we in this project consider a randomized strategy as follows:
+
   (Step 1) The load balancer randomly selects $d$ servers ($d < m$) 
   (Step 2) The load balancer checks the queue length of the selected $d$ servers 
   (Step 3) The load balancer dispatches the incoming customer to the server that has the shortest queue length. 
